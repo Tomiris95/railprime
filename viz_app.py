@@ -11,11 +11,11 @@ import seaborn as sns
 # Предположим, что данные загружаются из CSV или базы данных
 @st.cache_data
 def load_data():
-    tickets_demand = pd.read_csv('df_demand_06.11.csv')
+    tickets_demand = pd.read_csv('data/df_demand_06.11.csv')
     tickets_demand['date_departure'] = pd.to_datetime(tickets_demand['date_departure'])
-    sales = pd.read_csv('df_sales_06.11.csv')
-    routes = pd.read_csv('df_routes_05.11.csv')
-    stations = pd.read_csv('df_stations_05.11.csv')
+    sales = pd.read_csv('data/df_sales_06.11.csv')
+    routes = pd.read_csv('data/df_routes_05.11.csv')
+    stations = pd.read_csv('data/df_stations_05.11.csv')
     # Загрузите и другие таблицы аналогично
     return tickets_demand, sales, routes, stations
 
