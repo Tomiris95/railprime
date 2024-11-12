@@ -4,4 +4,3 @@ plotly
 seaborn
 numpy
 scikit-learn
-math
