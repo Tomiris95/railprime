@@ -235,6 +235,8 @@ elif section == "Продажи билетов":
         numerical_cols = filtered_sales.drop(columns=cols_to_drop).select_dtypes(include=['float64', 'int64']).columns.tolist()
         categorical_cols = filtered_sales.drop(columns=cols_to_drop).select_dtypes(include=['object']).columns.tolist()
 
+        filtered_sales = filtered_sales.query('price>0')
+
         # Выбор столбца для оси X и Y
         selected_x = st.selectbox("Выберите столбец для оси X", numerical_cols + categorical_cols)
         selected_y = 'price'
