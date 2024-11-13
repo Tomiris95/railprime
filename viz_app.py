@@ -248,6 +248,7 @@ elif section == "Продажи билетов":
             ax.set_xlabel(selected_x)
             ax.set_ylabel(selected_y)
             ax.set_title(f"Зависимость {selected_y} от {selected_x}")
+            ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
             st.pyplot(fig)
 
         else:
@@ -256,6 +257,7 @@ elif section == "Продажи билетов":
             fig, ax = plt.subplots()
             sns.boxplot(data=filtered_sales, x=selected_x, y=selected_y, ax=ax)
             ax.set_title(f"Зависимость {selected_y} по {selected_x}")
+            ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
             st.pyplot(fig)
 
         # elif selected_x in numerical_cols and selected_y in categorical_cols:
